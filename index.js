@@ -1,7 +1,8 @@
 import express from 'express'
 import parser from 'body-parser'
 import cors from 'cors';
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
+import User from './src/models/user'
 
 
 const app = express();
@@ -22,6 +23,20 @@ app.get('/',(req,res)=>{
 });
 
 
+app.post('/user/create',(req,res) => {
+    let user = req.body
+    User.create(user)
+        .then((user) => {
+            return res.status(201).json(
+                {message:'Usuario Creado',
+                id:user._id}
+            )
+         })  
+        .catch((err) =>{
+            console.log(err);
+            return res.status(400).json(err);
+    })
+});
 
 
 
