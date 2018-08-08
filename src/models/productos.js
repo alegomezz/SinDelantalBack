@@ -4,7 +4,6 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const ProductosSchema = new Schema({
-   //id_tienda
    "id_tienda":{
         type:Schema.Types.ObjectId,
         ref:'Tiendas',

@@ -3,7 +3,6 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const Pedido = new Schema({
-   //como conectar productos, monto y cupon
    "producto":[{
         type:Schema.Types.ObjectId,
         ref:'Productos',
@@ -29,11 +28,11 @@ const Pedido = new Schema({
         ref:'Users',
         required: true
     },
-    "Tienda":{
+    "tienda":{
         type:Number,
         required:true
     }, 
-    "Status_Pago":{
+    "status_pago":{
         type: Boolean,
         required: true
     },

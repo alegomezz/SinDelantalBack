@@ -54,10 +54,14 @@ const TiendaSchema = new Schema({
         required: true
     },
     
-    "costo":{
-        type: Number,
+    "costo":[],
+
+    "productos": [{
+        type:Schema.Types.ObjectId,
+        ref: 'Productos',
         required: true
-    }
+    }]
+
 
  
 },{collection:"Tiendas",timestamps:true});
