@@ -26,7 +26,7 @@ app.get('/',(req,res)=>{
 app.post('/user/create',(req,res) => {
     let user = req.body
     User.create(user)
-        .then((user) => {
+        .then((user) => 
             return res.status(201).json(
                 {message:'Usuario Creado',
                 id:user._id}
