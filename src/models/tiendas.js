@@ -19,8 +19,11 @@ const TiendaSchema = new Schema({
         required:true
     }, 
     
-    //conectar con {tipo}
-    //costo
+    "tipo_tienda": {
+        type:Schema.Types.ObjectId,
+        ref:'tipo_tiendas',
+        required:true
+    },
 
     "calificacion":{
         type:[{
