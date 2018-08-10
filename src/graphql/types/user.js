@@ -12,7 +12,7 @@ export const UserType = new GraphQLObjectType({
     fields: () => ({
         _id: {
             type:GraphQLNonNull(GraphQLID)
-        },
+       },
         nombre:{
             type:GraphQLString
         },
