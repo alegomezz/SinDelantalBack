@@ -2,8 +2,8 @@ import express from 'express'
 import parser from 'body-parser'
 import cors from 'cors';
 import mongoose from 'mongoose'
-//import graphQLHTTP from 'express-graphql'
-//import schema from './src/graphql'
+import graphQLHTTP from 'express-graphql'
+import schema from './src/graphql'
 import User from './src/models/user'
 
 
@@ -40,6 +40,10 @@ app.post('/user/create',(req,res) => {
     })
 });
 
-
+app.use('/graphql', graphQLHTTP((req,res)=>({
+    schema,
+    graphiql:true,
+    pretty:true
+})));
 
 app.listen(PORT,()=>console.log(`Server on ${PORT}`))

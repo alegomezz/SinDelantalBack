@@ -1,7 +1,5 @@
 import mongoose from 'mongoose'
-import bcrypt from 'bcrypt'
 
-const SALT = 10;
 
 const Schema = mongoose.Schema
 
@@ -70,4 +68,4 @@ const TiendaSchema = new Schema({
 },{collection:"Tiendas",timestamps:true});
 
 
-export default mongoose.model('Tiendas',UserSchema)
+export default mongoose.model('Tiendas',TiendaSchema)

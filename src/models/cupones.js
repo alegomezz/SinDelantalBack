@@ -20,4 +20,4 @@ const CuponesSchema = new Schema({
 },{collection:"Cupones",timestamps:true});
 
 
-export default mongoose.model('Cupones',UserSchema)
+export default mongoose.model('Cupones',CuponesSchema)

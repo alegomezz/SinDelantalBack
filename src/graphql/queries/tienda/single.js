@@ -16,8 +16,8 @@ const querySingleTienda = {
     },
 
     resolve(root,params){
-        const Tiendas = Tienda.findById().exec()
-        return Tiendas
+        const tiendas = Tienda.findById().exec()
+        return tiendas
     }
 }
 

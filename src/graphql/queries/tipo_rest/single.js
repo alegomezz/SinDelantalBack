@@ -16,8 +16,8 @@ const querySingleTipo_Rest = {
     },
 
     resolve(root,params){
-        const Tipos_Rest = Tipo_Rest.findById().exec()
-        return Tipos_Rest
+        const tipos_Rest = Tipo_Rest.findById().exec()
+        return tipos_Rest
     }
 }
 

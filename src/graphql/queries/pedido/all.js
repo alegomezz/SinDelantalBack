@@ -8,9 +8,9 @@ import {PedidosType} from '../../types/pedido'
 const queryAllPedidos= {
     type: new GraphQLList(PedidosType),
     resolve(){
-        const Pedidos = Pedido.find().exec()
-        if (!Pedidos) throw new Error ('Error al traer los pedidos de la db')
-        return Pedidos
+        const pedidos = Pedido.find().exec()
+        if (!pedidos) throw new Error ('Error al traer los pedidos de la db')
+        return pedidos
     }
 }
 

@@ -8,9 +8,9 @@ import {Tipo_RestType} from '../../types/tipo_rest'
 const queryAllTipo_Rest = {
     type: new GraphQLList(Tipo_RestType),
     resolve(){
-        const Tipos_Rest = Tipo_Rest.find().exec()
-        if (!Tipos_Rest) throw new Error ('Error al traer el tipo de restaurante de la db')
-        return Tipos_Rest
+        const tipos_Rest = Tipo_Rest.find().exec()
+        if (!tipos_Rest) throw new Error ('Error al traer el tipo de restaurante de la db')
+        return tipos_Rest
     }
 }
 

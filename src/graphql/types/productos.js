@@ -4,7 +4,8 @@ import {
     GraphQLID,
     GraphQLNonNull,
     GraphQLInt,
-    GraphQLList
+    GraphQLList,
+    GraphQLInputObjectType
 } from 'graphql'
 
 export const ProductosType = new GraphQLObjectType({
@@ -32,3 +33,25 @@ export const ProductosType = new GraphQLObjectType({
 
     })
 });
+
+export const ProductosInputType = new GraphQLInputObjectType({
+    name:"addProductos",
+    description:"Mutation para agregar productos",
+    fields: () => ({
+        nombre:{
+            type:GraphQLString
+        },
+        precio: {
+            type: GraphQLInt
+        },
+        descripcion: {
+            type: GraphQLString
+        },
+        tipo: {
+            type: GraphQLString
+        },
+        foto: {
+            type: GraphQLList(GraphQLString)
+        }
+    })
+})

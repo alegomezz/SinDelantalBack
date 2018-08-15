@@ -16,8 +16,8 @@ const querySinglePedido = {
     },
 
     resolve(root,params){
-        const Pedidos = Pedido.findById().exec()
-        return Pedidos
+        const pedidos = Pedido.findById().exec()
+        return pedidos
     }
 }
 

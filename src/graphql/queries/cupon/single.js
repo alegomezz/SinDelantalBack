@@ -16,8 +16,8 @@ const querySingleCupon = {
     },
 
     resolve(root,params){
-        const Cupones = Cupon.findById().exec()
-        return Cupones
+        const cupones = Cupon.findById().exec()
+        return cupones
     }
 }
 

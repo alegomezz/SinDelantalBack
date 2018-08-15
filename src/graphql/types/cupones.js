@@ -3,7 +3,8 @@ import {
     GraphQLString,
     GraphQLID,
     GraphQLNonNull,
-    GraphQLInt
+    GraphQLInt,
+    GraphQLInputObjectType
 } from 'graphql'
 
 export const CuponesType = new GraphQLObjectType({
@@ -24,4 +25,22 @@ export const CuponesType = new GraphQLObjectType({
         }
     })
 });
+
+
+export const CuponesInputType = new GraphQLInputObjectType({
+    name:"addCupones",
+    description:"mutation para agregar cupones", 
+    fields: ()=> ({
+        cupon:{
+            type:GraphQLString
+        },
+        descuento: {
+            type: GraphQLInt
+        },
+        descripcion_cupon: {
+            type: GraphQLString
+        }
+    })
+})
+
 

@@ -8,9 +8,9 @@ import {ProductosType} from '../../types/productos'
 const queryAllProductos= {
     type: new GraphQLList(ProductosType),
     resolve(){
-        const Productos = Producto.find().exec()
-        if (!Productos) throw new Error ('Error al traer los productos de la db')
-        return Productos
+        const productos = Producto.find().exec()
+        if (!productos) throw new Error ('Error al traer los productos de la db')
+        return productos
     }
 }
 

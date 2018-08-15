@@ -16,8 +16,8 @@ const querySingleProducto = {
     },
 
     resolve(root,params){
-        const Productos = Producto.findById().exec()
-        return Productos
+        const productos = Producto.findById().exec()
+        return productos
     }
 }
 

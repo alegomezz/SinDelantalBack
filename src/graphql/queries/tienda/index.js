@@ -1,9 +1,9 @@
-import allTienda from './tienda'
-import singleTienda from './tienda'
+import allTiendas from './all'
+import singleTienda from './single'
 
 
 export default {
-    allTienda,
+    allTiendas,
     singleTienda
 
 }

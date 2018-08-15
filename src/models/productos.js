@@ -35,4 +35,4 @@ const ProductosSchema = new Schema({
 },{collection:"Productos",timestamps:true});
 
 
-export default mongoose.model('Productos',UserSchema)
+export default mongoose.model('Productos',ProductosSchema)

@@ -15,4 +15,4 @@ const TipoSchema = new Schema({
 },{collection:"Tipo",timestamps:true});
 
 
-export default mongoose.model('Tipo',UserSchema)
+export default mongoose.model('Tipo',TipoSchema)

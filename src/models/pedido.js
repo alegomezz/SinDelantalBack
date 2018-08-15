@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const Pedido = new Schema({
+const PedidoSchema = new Schema({
    "producto":[{
         type:Schema.Types.ObjectId,
         ref:'Productos',
@@ -45,4 +45,4 @@ const Pedido = new Schema({
 },{collection:"Pedido",timestamps:true});
 
 
-export default mongoose.model('Pedido',UserSchema)
+export default mongoose.model('Pedido',PedidoSchema)

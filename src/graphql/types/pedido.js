@@ -4,8 +4,8 @@ import {
     GraphQLID,
     GraphQLNonNull,
     GraphQLInt,
-    GraphQLList,
-    GraphQLBoolean
+    GraphQLBoolean,
+    GraphQLInputObjectType
 } from 'graphql'
 import { ProductosType } from './productos';
 import {UserType} from './user';
@@ -54,7 +54,42 @@ export const PedidosType = new GraphQLObjectType({
             type: GraphQLBoolean
         },
         user_direction: {
-            type: GraphQLstring
+            type: GraphQLString
         }
     })
 });
+
+export const PedidosInputType = new GraphQLInputObjectType({
+    name:"addPedidos",
+    description:"mutation para agregar pedidos", 
+    fields: ()=> ({
+        producto:{
+            type:GraphQLNonNull(GraphQLID)
+            
+        },
+        monto: {
+            type: GraphQLInt
+        },
+        cupon: {
+            type:GraphQLNonNull(GraphQLID)
+            
+        },
+        status: {
+            type: GraphQLInt
+        },
+
+        user: {
+           type:GraphQLNonNull(GraphQLID)
+
+        },
+        tienda: {
+            type: GraphQLInt
+        },
+        status_pago: {
+            type: GraphQLBoolean
+        },
+        user_direction: {
+            type: GraphQLString
+        }
+    })
+})
